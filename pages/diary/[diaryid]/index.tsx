@@ -10,6 +10,7 @@ import client from '../../../utils/api'
 import Model from '../../../component/Model'
 import { useState } from 'react'
 import { useGetDiaryQuery } from '../../../store/rtkapi'
+import { getSession } from 'next-auth/client'
 export const Diary = gql`
   query getDiary($getDiaryId: ID!) {
     getDiary(id: $getDiaryId) {
@@ -194,6 +195,20 @@ const Singlediary = () => {
 }
 
 export default Singlediary
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context)
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      },
+    }
+  }
+  return {
+    props: { authorid: session.userId },
+  }
+}
 
 // export const getServerSideProps: GetServerSideProps = async (context) => {
 //   try {

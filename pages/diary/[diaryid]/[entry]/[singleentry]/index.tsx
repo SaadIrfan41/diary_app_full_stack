@@ -104,25 +104,25 @@ const SingleEntry = () => {
 
 export default SingleEntry
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  try {
-    const { data } = await client.query({
-      query: Entry,
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   try {
+//     const { data } = await client.query({
+//       query: Entry,
 
-      variables: { getEntryId: context?.params?.singleentry },
-    })
-    return {
-      props: {
-        getEntryId: context?.params?.singleentry,
-        data,
-      },
-    }
-  } catch (error) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-}
+//       variables: { getEntryId: context?.params?.singleentry },
+//     })
+//     return {
+//       props: {
+//         getEntryId: context?.params?.singleentry,
+//         data,
+//       },
+//     }
+//   } catch (error) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//         permanent: false,
+//       },
+//     }
+//   }
+// }

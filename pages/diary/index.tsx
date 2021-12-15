@@ -12,13 +12,13 @@ import { useRouter } from 'next/router'
 import { Diaries } from '../index'
 import { useNewDiaryMutation } from '../../store/rtkapi'
 
-const CreateDiary = gql`
-  mutation newDiary($tittle: String!, $privacy: String!, $author: ID!) {
-    newDiary(tittle: $tittle, privacy: $privacy, author: $author) {
-      tittle
-    }
-  }
-`
+// const CreateDiary = gql`
+//   mutation newDiary($tittle: String!, $privacy: String!, $author: ID!) {
+//     newDiary(tittle: $tittle, privacy: $privacy, author: $author) {
+//       tittle
+//     }
+//   }
+// `
 
 const Index = ({ authorid }: any) => {
   const router = useRouter()

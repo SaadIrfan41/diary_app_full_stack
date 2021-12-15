@@ -13,33 +13,33 @@ import client from '../utils/api'
 import NextNprogress from 'nextjs-progressbar'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ApolloProvider client={client}>
-      <ReduxStore store={store}>
-        <Provider>
-          <NextNprogress
-            color='#FBC02D'
-            startPosition={0.3}
-            stopDelayMs={200}
-            height={3}
-            showOnShallow={true}
-          />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-          <ToastContainer
-            position='top-right'
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
-        </Provider>
-      </ReduxStore>
-    </ApolloProvider>
+    // <ApolloProvider client={client}>
+    <ReduxStore store={store}>
+      <Provider>
+        <NextNprogress
+          color='#FBC02D'
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          showOnShallow={true}
+        />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        <ToastContainer
+          position='top-right'
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </Provider>
+    </ReduxStore>
+    // </ApolloProvider>
   )
 }
 export default MyApp
