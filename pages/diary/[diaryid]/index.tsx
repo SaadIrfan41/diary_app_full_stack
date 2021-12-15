@@ -195,22 +195,22 @@ const Singlediary = () => {
 
 export default Singlediary
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  try {
-    const { data } = await client.query({
-      query: Diary,
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   try {
+//     const { data } = await client.query({
+//       query: Diary,
 
-      variables: { getDiaryId: context?.params?.diaryid },
-    })
-    return {
-      props: {},
-    }
-  } catch (error) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-}
+//       variables: { getDiaryId: context?.params?.diaryid },
+//     })
+//     return {
+//       props: {},
+//     }
+//   } catch (error) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//         permanent: false,
+//       },
+//     }
+//   }
+// }
