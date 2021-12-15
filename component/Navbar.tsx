@@ -26,7 +26,7 @@ const Navbar = () => {
               </a>
             </Link>
           </div>
-          <div className='flex items-center'>
+          {/* <div className='flex items-center'>
             <div>
               <h3 className='text-sm tracking-wide font-medium text-gray-500 uppercase px-2'>
                 Diaries
@@ -42,7 +42,7 @@ const Navbar = () => {
                 Settings
               </h3>
             </div>
-          </div>
+          </div> */}
           <div className='flex'>
             {!session ? (
               <>
