@@ -197,26 +197,41 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       },
     }
   }
-
-  try {
-    const { data } = await client.query({
-      query: Entry,
-
-      variables: { getEntryId: context?.params?.entryid },
-    })
-    return {
-      props: {
-        entryid: context?.params?.entryid,
-        authorid: session.userId,
-        data,
-      },
-    }
-  } catch (error) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
+  return {
+    props: { authorid: session.userId },
   }
 }
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const session = await getSession(context)
+//   if (!session) {
+//     return {
+//       redirect: {
+//         destination: '/login',
+//         permanent: false,
+//       },
+//     }
+//   }
+
+//   try {
+//     const { data } = await client.query({
+//       query: Entry,
+
+//       variables: { getEntryId: context?.params?.entryid },
+//     })
+//     return {
+//       props: {
+//         entryid: context?.params?.entryid,
+//         authorid: session.userId,
+//         data,
+//       },
+//     }
+//   } catch (error) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//         permanent: false,
+//       },
+//     }
+//   }
+// }

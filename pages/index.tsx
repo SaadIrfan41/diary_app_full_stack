@@ -54,7 +54,7 @@ const Home = ({ data }: dataprops) => {
           <Link href='/diary' passHref>
             <button
               type='button'
-              className='inline-flex  px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 items-start'
+              className='inline-flex  px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-yellow-900 hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 items-start'
             >
               <span
                 className='-ml-1 mr-3 h-5 w-5 material-icons-outlined '

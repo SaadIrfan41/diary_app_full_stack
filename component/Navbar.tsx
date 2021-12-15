@@ -18,7 +18,7 @@ const Navbar = () => {
             <Link href='/'>
               <a className='flex items-center flex-shrink-0'>
                 <img
-                  className='h-15 w-auto sm:h-10'
+                  className=' h-12 w-auto sm:h-10'
                   src='/diarylogo.svg'
                   alt=''
                 />
@@ -48,14 +48,14 @@ const Navbar = () => {
               <>
                 <div className=' px-2'>
                   <Link href='/login'>
-                    <a className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-700'>
+                    <a className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white  bg-yellow-900 hover:bg-yellow-700'>
                       Sign In
                     </a>
                   </Link>
                 </div>
                 <div>
                   <Link href='/register'>
-                    <a className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-700'>
+                    <a className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-900 hover:bg-yellow-700'>
                       Sign Up
                     </a>
                   </Link>
@@ -65,7 +65,7 @@ const Navbar = () => {
               <>
                 <div>
                   <button
-                    className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-700'
+                    className=' space-x-10 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-900 hover:bg-yellow-700'
                     onClick={() => signOut()}
                   >
                     LogOut
