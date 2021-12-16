@@ -66,7 +66,7 @@ export const api = createApi({
       //@ts-ignore
       providesTags: (result, error) => [{ type: 'NewDiary' }],
       //@ts-ignore
-      providesTags: (result, error) => [{ type: 'Diary' }],
+      providesTags: (result, error, id) => [{ type: 'Diary', id }],
     }),
     getDiary: builder.query({
       query: (getDiaryId) => ({
