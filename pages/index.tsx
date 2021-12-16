@@ -6,27 +6,27 @@ import Link from 'next/link'
 import client from '../utils/api'
 import { gql } from '@apollo/client/core'
 import { useGetDiariesQuery } from '../store/rtkapi'
-// export const Diaries = gql`
-//   query getDiaries {
-//     getDiaries {
-//       id
-//       tittle
-//       privacy
-//       entries {
-//         tittle
-//       }
-//       author {
-//         _id
-//         email
-//         username
-//         image
-//       }
-//     }
-//   }
-// `
-// export type dataprops = {
-//   data: Diary
-// }
+export const Diaries = gql`
+  query getDiaries {
+    getDiaries {
+      id
+      tittle
+      privacy
+      entries {
+        tittle
+      }
+      author {
+        _id
+        email
+        username
+        image
+      }
+    }
+  }
+`
+export type dataprops = {
+  data: Diary
+}
 
 const Home = () => {
   //@ts-ignore
