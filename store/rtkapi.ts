@@ -51,8 +51,12 @@ export const api = createApi({
                 tittle
               }
               author {
+                _id
+
                 email
+
                 username
+
                 image
               }
             }
@@ -181,7 +185,7 @@ export const api = createApi({
         variables: { getEntryId: getEntryId },
       }),
       //@ts-ignore
-      // providesTags: (result, error, id) => [{ type: 'Diary', id }],
+      providesTags: (result, error, id) => [{ type: 'Diary', id }],
     }),
   }),
 })
