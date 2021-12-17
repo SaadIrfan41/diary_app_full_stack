@@ -64,7 +64,9 @@ export const api = createApi({
         `,
       }),
       //@ts-ignore
-      providesTags: (result, error) => [{ type: 'NewDiary' }],
+      // providesTags: (result, error, id) => [
+      //   { type: 'NewDiary', id, error, result },
+      // ],
       //@ts-ignore
       providesTags: (result, error, id) => [{ type: 'Diary', id }],
     }),
@@ -89,7 +91,7 @@ export const api = createApi({
       //@ts-ignore
       providesTags: (result, error, id) => [{ type: 'Diary', id }],
       //@ts-ignore
-      providesTags: (result, error, id) => [{ type: 'Diary', id }],
+      // providesTags: (result, error, id) => [{ type: 'Diary', id }],
     }),
     newEntry: builder.mutation({
       //@ts-ignore
@@ -167,9 +169,7 @@ export const api = createApi({
         variables: data,
       }),
       //@ts-ignore
-      invalidatesTags: (result, error, { data }) => [
-        { type: 'NewDiary', data },
-      ],
+      invalidatesTags: (result, error, { data }) => [{ type: 'Diary', data }],
     }),
     getEntry: builder.query({
       query: (getEntryId) => ({

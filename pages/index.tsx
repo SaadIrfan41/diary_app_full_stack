@@ -43,6 +43,7 @@ const Home = () => {
   if (error) return <h1>Error</h1>
   console.log('USER ID', session?.userId)
   console.log(rtkdata)
+  console.log('Get Diaries Error', error)
   return (
     <div className='flex justify-center max-w-6xl mx-auto pt-5'>
       <Head>
